@@ -1,0 +1,6 @@
+resource_registry:
+  OS::TripleO::Services::IronicInspector: /usr/share/openstack-tripleo-heat-templates/docker/services/ironic-inspector.yaml
+parameter_defaults:
+  IronicInspectorIpRange: '192.168.24.210,192.168.24.240'
+  IPAImageURLs: '["http://192.168.24.1:8088/agent.kernel","http://192.168.24.1:8088/agent.ramdisk"]'
+  IronicInspectorInterface: 'br-baremetal'
