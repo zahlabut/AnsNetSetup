@@ -13,6 +13,6 @@ openstack overcloud deploy \
 -e /home/stack/templates/ironic.yaml \
 -e /home/stack/templates/ceph.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ml2-ansible.yaml \
-#-e /home/stack/templates/neutron-ml2-ansible.yaml \
+-e /home/stack/templates/neutron-ml2-ansible.yaml \
 --log-file overcloud_deployment.log \
 -vv
