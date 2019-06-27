@@ -11,6 +11,7 @@ openstack overcloud deploy \
 -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-ansible.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/ironic.yaml \
 -e /home/stack/templates/ironic.yaml \
+-e /home/stack/templates/ironic-inspector.yaml \
 -e /home/stack/templates/ceph.yaml \
 -e /home/stack/templates/nodes_data.yaml \
 -e /home/stack/containers-prepare-parameter.yaml \
