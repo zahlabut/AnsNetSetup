@@ -13,9 +13,3 @@ parameter_defaults:
       ansible_user: ansible
       ansible_ssh_pass: N3tAutomation!
       manage_vlans: false
-    switch2:
-      ansible_network_os: junos
-      ansible_host: 10.9.95.25
-      ansible_user: ansible
-      ansible_ssh_pass: N3tAutomation!
-      manage_vlans: false
