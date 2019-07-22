@@ -66,38 +66,7 @@
 			"pm_user": "root",
 			"pm_password": "calvin",
 			"pm_addr": "10.9.10.228"
-		},
-
-		{
-			"mac": [
-				"58:8a:5a:53:5f:f3"
-			],
-			"arch": "x86_64",
-                        "memory": "130000",
-                        "disk": "500",
-                        "cpu": "10",
-			"pm_type": "pxe_ipmitool",
-			"pm_user": "root",
-			"pm_password": "calvin",
-			"pm_addr": "10.9.10.229",
-                        "name": "ironic-0"
-		},
-
-		{
-			"mac": [
-				"58:8a:5a:53:67:85"
-			],
-			"arch": "x86_64",
-                        "memory": "130000",
-                        "disk": "500",
-                        "cpu": "10",
-			"pm_type": "pxe_ipmitool",
-			"pm_user": "root",
-			"pm_password": "calvin",
-			"pm_addr": "10.9.10.230",
-                        "name": "ironic-1"
 		}
-
 
 	]
 }
