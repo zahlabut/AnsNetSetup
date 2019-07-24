@@ -14,6 +14,7 @@ parameter_defaults:
   IronicEnabledRaidInterfaces: [no-raid, fake]
   IronicEnabledVendorInterfaces: [ipmitool, fake, no-vendor]
   IronicIPXEEnabled: true
+  IronicEnabledInspectInterfaces: [no-inspect, inspector, fake]
   NovaSchedulerDefaultFilters:
       - RetryFilter
       - AggregateInstanceExtraSpecsFilter

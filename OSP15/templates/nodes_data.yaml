@@ -1,5 +1,5 @@
 parameter_defaults:
-    NtpServer: ['clock.redhat.com']
+    NtpServer: ["clock.redhat.com","clock2.redhat.com"]
     ControllerCount: 3
     OvercloudControllerFlavor: control
     ComputeCount: 1

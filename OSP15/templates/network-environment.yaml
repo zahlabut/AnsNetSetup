@@ -4,7 +4,7 @@ resource_registry:
   OS::TripleO::CephStorage::Net::SoftwareConfig: /home/stack/templates/nic-configs/ceph-storage.yaml
 
 parameter_defaults:
-  DnsServers: ["10.16.36.29","10.46.0.32","10.46.0.31"]
+  DnsServers: ["10.46.0.32","10.46.0.31"]
   InternalApiNetCidr: 192.168.100.0/24
   StorageNetCidr: 192.168.150.0/24
   StorageMgmtNetCidr: 192.168.200.0/24
@@ -25,10 +25,10 @@ parameter_defaults:
   StorageNetworkVlanID: 1102
   StorageMgmtNetworkVlanID: 1103
   TenantNetworkVlanID: 1104
-  NeutronExternalNetworkBridge: ''
-  NeutronNetworkType: vxlan
+  NeutronExternalNetworkBridge: 'br-ex'
+  NeutronNetworkType: geneve
   NeutronNetworkVLANRanges: baremetal:1200:1209
   NeutronFlatNetworks: datacentre,baremetal # baremetal needs to be a flat network
   NeutronBridgeMappings: datacentre:br-ex,baremetal:br-baremetal # New 
-  NeutronTunnelTypes: vxlan
+  NeutronTunnelTypes: geneve
 
