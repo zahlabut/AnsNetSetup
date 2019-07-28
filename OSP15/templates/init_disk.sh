@@ -12,8 +12,13 @@ for i in $(seq 3 5); do
     if [[ ! -e /dev/${DEV} ]]; then
         dd if=/dev/zero of=/var/lib/${BLOB} bs=1 count=0 seek=20G
         losetup /dev/${DEV} /var/lib/${BLOB}
+        pvcreate /dev/${DEV}
+        vgcreate  ceph_vg_${i} /dev/${DEV}
+        lvcreate -n  ceph_lv_wal_${i}  -L 1G  ceph_vg_${i}
+        lvcreate -n  ceph_lv_db_${i}  -L 2G  ceph_vg_${i}
+        lvcreate -n  ceph_lv_data_${i}  -L 16G  ceph_vg_${i}
         #sgdisk -Z /dev/${DEV}
-        sgdisk -g /dev/${DEV}
+        #sgdisk -g /dev/${DEV}
     else
         echo "ERROR: /dev/${DEV} already exists, not using it with losetup"
         exit 1
