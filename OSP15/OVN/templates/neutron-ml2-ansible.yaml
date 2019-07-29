@@ -4,7 +4,7 @@ parameter_defaults:
   IronicEnabledNetworkInterfaces: flat,noop,neutron
   IronicDefaultNetworkInterface: neutron
   NeutronMechanismDrivers: ovn,ansible
-  NeutronTypeDrivers: local,vxlan,vlan,flat
+  NeutronTypeDrivers: local,geneve,vlan,flat
   NeutronNetworkType: vlan
   ML2HostConfigs:
     switch1:
