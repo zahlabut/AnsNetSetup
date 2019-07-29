@@ -5,7 +5,7 @@ parameter_defaults:
   IronicDefaultNetworkInterface: neutron
   NeutronMechanismDrivers: ovn,ansible
   NeutronTypeDrivers: local,geneve,vlan,flat
-  NeutronNetworkType: vlan
+  NeutronNetworkType: geneve
   ML2HostConfigs:
     switch1:
       ansible_network_os: junos
