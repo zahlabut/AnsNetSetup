@@ -2,6 +2,7 @@ resource_registry:
   OS::TripleO::NodeUserData: /home/stack/templates/first-boot.yaml
 
 parameter_defaults:
+  EnableRhcs4Beta: true
   CephPoolDefaultPgNum: 32
   CephPoolDefaultSize: 1
   CephAnsibleExtraConfig:
