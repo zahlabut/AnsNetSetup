@@ -16,5 +16,6 @@ openstack overcloud deploy \
 -e /home/stack/templates/nodes_data.yaml \
 -e /home/stack/containers-prepare-parameter.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ml2-ansible.yaml \
+-e /home/stack/templates/neutron-ml2-ansible.yaml \
 --log-file overcloud_deployment.log \
 -v
