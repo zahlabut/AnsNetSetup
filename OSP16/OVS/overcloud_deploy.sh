@@ -18,4 +18,4 @@ openstack overcloud deploy \
 -e /home/stack/containers-prepare-parameter.yaml \
 -e /home/stack/templates/neutron-ml2-ansible.yaml \
 --log-file overcloud_deployment.log \
--v
+-vvvv
