@@ -10,7 +10,7 @@
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
 			"pm_password": "calvin",
-			"pm_addr": "10.9.10.224"
+			"pm_addr": "hardprov-fx2-2-drac.mgmt.snedlab.lab.eng.rdu2.redhat.com"
 		},
 		{
 			"mac": [
@@ -23,7 +23,7 @@
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
 			"pm_password": "calvin",
-			"pm_addr": "10.9.10.225"
+			"pm_addr": "hardprov-fx2-3-drac.mgmt.snedlab.lab.eng.rdu2.redhat.com"
 		},
 
 		{
@@ -37,7 +37,7 @@
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
 			"pm_password": "calvin",
-			"pm_addr": "10.9.10.226"
+			"pm_addr": "hardprov-fx2-4-drac.mgmt.snedlab.lab.eng.rdu2.redhat.com"
 		},
 
 		{
@@ -51,7 +51,7 @@
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
 			"pm_password": "calvin",
-			"pm_addr": "10.9.10.227"
+			"pm_addr": "hardprov-fx2-5-drac.mgmt.snedlab.lab.eng.rdu2.redhat.com"
 		},
 
 		{
@@ -65,9 +65,10 @@
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
 			"pm_password": "calvin",
-			"pm_addr": "10.9.10.228"
+			"pm_addr": "hardprov-fx2-6-drac.mgmt.snedlab.lab.eng.rdu2.redhat.com"
 		}
 
 
 	]
 }
+
