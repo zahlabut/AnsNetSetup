@@ -26,9 +26,9 @@ parameter_defaults:
   StorageMgmtNetworkVlanID: 1103
   TenantNetworkVlanID: 1104
   NeutronExternalNetworkBridge: 'br-ex'
-  NeutronNetworkType: geneve
+  NeutronNetworkType: vxlan
   NeutronNetworkVLANRanges: baremetal:1200:1209
   NeutronFlatNetworks: datacentre,baremetal # baremetal needs to be a flat network
   NeutronBridgeMappings: datacentre:br-ex,baremetal:br-baremetal # New 
-  NeutronTunnelTypes: geneve
+  NeutronTunnelTypes: vxlan
 
