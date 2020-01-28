@@ -43,6 +43,7 @@ SSH to Undercloud host
 sudo iptables -t nat -I POSTROUTING -s 192.168.24.0/24 -j MASQUERADE
 
 3) Introspection
+git clone https://github.com/zahlabut/AnsNetSetup.git
 Copy 'OSP16/OVN/templates' folder to /home/stack/ 
 Copy 'OSP16/OVN/overcloud_deplo.sh' script to /home/stack
 
