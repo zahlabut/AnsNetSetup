@@ -10,6 +10,7 @@ openstack overcloud deploy \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/ironic-overcloud.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/ironic-inspector.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ml2-ansible.yaml \
+-e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ovs.yaml \
 -e /home/stack/templates/network-environment.yaml \
 -e /home/stack/templates/ironic.yaml \
 -e /home/stack/templates/ironic-inspector.yaml \
