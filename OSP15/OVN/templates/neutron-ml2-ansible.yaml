@@ -9,7 +9,7 @@ parameter_defaults:
   ML2HostConfigs:
     switch1:
       ansible_network_os: junos
-      ansible_host: 10.9.95.25
+      ansible_host: 10.10.191.221
       ansible_user: ansible
       ansible_ssh_pass: N3tAutomation!
       manage_vlans: false
