@@ -1,0 +1,9 @@
+parameter_defaults:
+    NtpServer: ["clock.redhat.com","clock2.redhat.com"]
+    ControllerCount: 3
+    OvercloudControllerFlavor: control
+    ComputeCount: 1
+    OvercloudComputeFlavor: compute
+    CephStorageCount: 1
+    OvercloudCephStorageFlavor: ceph-storage
+

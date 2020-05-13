@@ -1,0 +1,33 @@
+resource_registry:
+  OS::TripleO::NodeUserData: /home/stack/templates/first-boot.yaml
+
+parameter_defaults:
+  EnableRhcs4Beta: true
+  CephPoolDefaultPgNum: 32
+  CephPoolDefaultSize: 1
+  CephAnsibleExtraConfig:
+    ceph_osd_docker_memory_limit: 3g
+    ceph_osd_docker_cpu_limit: 1
+  CephAnsiblePlaybookVerbosity: 3
+  CephAnsibleDisksConfig:
+    osd_objectstore: bluestore
+    osd_scenario: lvm
+    lvm_volumes:
+      - data: ceph_lv_data_3
+        data_vg: ceph_vg_3
+        db: ceph_lv_db_3
+        db_vg: ceph_vg_3
+        wal: ceph_lv_wal_3
+        wal_vg: ceph_vg_3
+      - data: ceph_lv_data_4
+        data_vg: ceph_vg_4
+        db: ceph_lv_db_4
+        db_vg: ceph_vg_4
+        wal: ceph_lv_wal_4
+        wal_vg: ceph_vg_4
+      - data: ceph_lv_data_5
+        data_vg: ceph_vg_5
+        db: ceph_lv_db_5
+        db_vg: ceph_vg_5
+        wal: ceph_lv_wal_5
+        wal_vg: ceph_vg_5
