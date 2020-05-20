@@ -1,7 +1,7 @@
 {
 	"nodes": [{
 			"mac": [
-				"A8:99:69:CB:BA:2F"
+				"a8:99:69:cb:ba:2f"
 			],
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
@@ -10,7 +10,7 @@
 		},
 		{
 			"mac": [
-				"A8:99:69:CB:B9:A9"
+				"a8:99:69:cb:b9:a9"
 			],
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
@@ -20,7 +20,7 @@
 
 		{
 			"mac": [
-				"A8:99:69:CB:BF:E7"
+				"a8:99:69:cb:bf:e7"
 			],
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
@@ -30,7 +30,7 @@
 
 		{
 			"mac": [
-				"A8:99:69:CB:B9:5B"
+				"a8:99:69:cb:b9:5b"
 			],
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
@@ -40,7 +40,7 @@
 
 		{
 			"mac": [
-				"A8:99:69:CB:BB:9D"
+				"a8:99:69:cb:bb:9d"
 			],
 			"pm_type": "pxe_ipmitool",
 			"pm_user": "root",
