@@ -15,7 +15,7 @@ parameter_defaults:
   StorageMgmtAllocationPools: [{'start': '192.168.200.10', 'end': '192.168.200.200'}]
   TenantAllocationPools: [{'start': '192.168.250.10', 'end': '192.168.250.200'}]
   # Use an External allocation pool which will leave room for floating IPs
-  ExternalAllocationPools: [{'start': '10.9.92.25', 'end': '10.9.92.29'}]
+  ExternalAllocationPools: [{'start': '10.9.92.2', 'end': '10.9.92.13'}]
   # Set to the router gateway on the external network
   ExternalInterfaceDefaultRoute: 10.9.92.14
   ControlPlaneSubnetCidr: "24"
@@ -31,4 +31,3 @@ parameter_defaults:
   NeutronFlatNetworks: datacentre,baremetal # baremetal needs to be a flat network
   NeutronBridgeMappings: datacentre:br-ex,baremetal:br-baremetal # New 
   NeutronTunnelTypes: geneve
-
