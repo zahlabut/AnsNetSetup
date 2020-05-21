@@ -21,10 +21,10 @@ parameter_defaults:
   ControlPlaneSubnetCidr: "24"
   ControlPlaneDefaultRoute: 192.168.24.1
   EC2MetadataIp: 192.168.24.1
-  InternalApiNetworkVlanID: 100
-  StorageNetworkVlanID: 102
-  StorageMgmtNetworkVlanID: 104
-  TenantNetworkVlanID: 106
+  InternalApiNetworkVlanID: 1101
+  StorageNetworkVlanID: 1102
+  StorageMgmtNetworkVlanID: 1103
+  TenantNetworkVlanID: 1104
   NeutronExternalNetworkBridge: 'br-ex'
   NeutronNetworkType: geneve
   NeutronNetworkVLANRanges: baremetal:1200:1209
