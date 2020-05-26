@@ -8,8 +8,8 @@ parameter_defaults:
   NeutronNetworkType: vlan
   ML2HostConfigs:
     switch1:
-      ansible_network_os: junos
-      ansible_host: 10.10.191.221
-      ansible_user: ansible
-      ansible_ssh_pass: N3tAutomation!
+      ansible_network_os: eos
+      ansible_host: 10.9.103.1
+      ansible_user: admin
+      ansible_ssh_pass: redhat
       manage_vlans: false
