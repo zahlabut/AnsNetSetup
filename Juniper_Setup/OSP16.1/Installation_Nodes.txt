@@ -1,0 +1,89 @@
+### Install and run Infrared ###
+sudo yum install git gcc libffi-devel openssl-devel
+sudo yum install python-virtualenv
+sudo yum install libselinux-python
+git clone https://github.com/redhat-openstack/infrared.git
+cd infrared
+virtualenv .venv && source .venv/bin/activate
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install .
+
+*Note: delete "infarred" amd ".infrared" in order to reinstall all (Plugins e.t.c.)
+
+### Provision Undercloud Host ###
+infrared foreman --url https://theforeman.eng.lab.tlv.redhat.com --user rhos-qe --password qum5net --host-address hardprov-fx2-1.tripleo.lab.eng.rdu2.redhat.com --host-key /home/ashtempl/keys/jenkins_key --role undercloud -o provision.yml   --os-id 65 --medium-id 47 -vvvv
+
+
+### Install Undercloud ###
+1) Copy 'undercloud.conf' file into Infrared directory
+2) To start installation execute:
+infrared tripleo-undercloud \
+-o undercloud-install.yml \
+--config-file undercloud.conf \
+--mirror tlv \
+--version 16.1 \
+--build passed_phase1 \
+--buildmods pin \
+--ssl false \
+--tls-everywhere false \
+--tls-ca https://password.corp.redhat.com/RH-IT-Root-CA.crt \
+--config-options DEFAULT.undercloud_timezone=UTC \
+-vvvv
+
+### Install Overcloud ### 
+1) Ceph arameters validation in: 'containers-prepare-parameter.yaml' file
+ceph_image: rhceph-4.0-rhel8
+ceph_namespace: docker-registry.upshift.redhat.com/ceph
+ceph_tag: stable
+
+2) Adding Route
+SSH to Undercloud host
+sudo iptables -t nat -I POSTROUTING -s 192.168.24.0/24 -j MASQUERADE
+
+3) Introspection
+git clone https://github.com/zahlabut/AnsNetSetup.git
+Copy 'OSP16/OVN/templates' folder to /home/stack/ 
+Copy 'OSP16/OVN/overcloud_deplo.sh' script to /home/stack
+
+Run:
+sudo yum install -y rhosp-director-images && cd /home/stack &&  for i in `rpm -ql rhosp-director-images{,-ipa}-x86_64|grep tar`; do tar xvf $i; done &&  source stackrc && openstack overcloud image upload
+openstack overcloud node import templates/instackenv.json -vvvv
+openstack baremetal node list 
+
+Replace the IDs in the folowing command accordingly:
+openstack baremetal node set --name controller-0 ID
+openstack baremetal node set --name controller-1 ID
+openstack baremetal node set --name controller-2 ID
+openstack baremetal node set --name compute-0 ID
+openstack baremetal node set --name ceph-0 ID
+
+Run:
+openstack baremetal node set controller-0 --property capabilities="profile:control,boot_option:local"
+openstack baremetal node set controller-1 --property capabilities="profile:control,boot_option:local"
+openstack baremetal node set controller-2 --property capabilities="profile:control,boot_option:local"
+openstack baremetal node set compute-0 --property capabilities="profile:compute,boot_option:local"
+openstack baremetal node set ceph-0 --property capabilities="profile:ceph-storage,boot_option:local"
+
+Run:
+openstack baremetal node list 
+Make sure that everething is as expected.
+
+4) Run Introspection:
+openstack overcloud node introspect --all-manageable --provide
+
+5) Install Ceph:
+sudo yum install -y ceph-ansible
+
+6) Install Overcloud
+.stackrc;./overcloud_deploy.sh
+
+
+
+
+
+
+
+
+
+
