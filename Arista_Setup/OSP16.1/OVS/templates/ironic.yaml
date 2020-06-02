@@ -1,0 +1,25 @@
+parameter_defaults:
+  IronicDefaultNetworkInterface: neutron
+  IronicProvisioningNetwork: baremetal
+  IronicCleaningDiskErase: metadata
+  IronicCleaningNetwork: baremetal
+  IronicEnabledHardwareTypes:
+      - ipmi
+      - fake-hardware
+  IronicEnabledBootInterfaces: [pxe, fake]
+  IronicEnabledConsoleInterfaces: [ipmitool-socat, no-console, fake]
+  IronicEnabledDeployInterfaces: [iscsi, direct, fake]
+  IronicEnabledManagementInterfaces: [ipmitool, fake]
+  IronicEnabledPowerInterfaces: [ipmitool, fake]
+  IronicEnabledRaidInterfaces: [no-raid, fake]
+  IronicEnabledVendorInterfaces: [ipmitool, fake, no-vendor]
+  IronicIPXEEnabled: true
+  IronicEnabledInspectInterfaces: [no-inspect, inspector, fake]
+  NovaSchedulerDefaultFilters:
+      - RetryFilter
+      - AggregateInstanceExtraSpecsFilter
+      - AvailabilityZoneFilter
+      - ComputeFilter
+      - ComputeCapabilitiesFilter
+      - ImagePropertiesFilter
+
