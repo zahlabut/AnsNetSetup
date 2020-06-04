@@ -12,7 +12,7 @@ pip install .
 *Note: delete "infarred" amd ".infrared" in order to reinstall all (Plugins e.t.c.)
 
 ### Provision Undercloud Host ###
-infrared foreman --url https://theforeman.eng.lab.tlv.redhat.com --user rhos-qe --password qum5net --host-address hardprov-fx2-1.tripleo.lab.eng.rdu2.redhat.com --host-key /home/ashtempl/keys/jenkins_key --role undercloud -o provision.yml   --os-id 65 --medium-id 47 -vvvv
+infrared foreman --url https://theforeman.eng.lab.tlv.redhat.com --user rhos-qe --password qum5net --host-address hardprov-fx2-9.tripleo.lab.eng.rdu2.redhat.com --host-key /home/ashtempl/keys/jenkins_key --role undercloud -o provision.yml   --os-id 65 --medium-id 47 -vvvv
 
 
 
